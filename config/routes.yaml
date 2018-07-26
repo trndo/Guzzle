@@ -1,0 +1,3 @@
+request:
+   path: /request
+   controller: App\Controller\RequestController::request

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Repository - {{ repo }}</h1>
+    <h3>{{ info|length }} commits:</h3>
+        {% for commit in info %}
+            <ol>
+                <li><ins>Message</ins> - {{ commit['commit']['message'] }}</li>
+                <li><ins>Author</ins> - {{ commit['commit']['author']['name']}},{{ commit['commit']['author']['email']}}</li>
+                <li>{{ commit['sha'] }}</li>
+            </ol>
+        {% endfor %}
+{% endblock %}
